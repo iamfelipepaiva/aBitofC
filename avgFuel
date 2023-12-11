@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+
+    float avgspeed, time, distancia, litersspent, fuelLength;
+
+    printf("Type, in km/h, the average speed of your trip:");
+    scanf("%f", &avgspeed);
+
+    printf("\nNow, insert the number of hours it will take:");
+    scanf("%f", &time);
+
+    printf("\nInsert now the average length you car can go with a liter of fuel:");
+    scanf("%f", &fuelLength);
+
+    distancia = time * avgspeed;
+    litersspent = distancia / fuelLength;
+
+    printf("\nIt's estimated that about %.2f liters of fuel will be spent on this trip.", litersspent);
+
+    return 0;
+}
