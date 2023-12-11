@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+    float installment, months, currentValue, inter;
+
+    printf("Type the total value of the installment:");
+    scanf("%f", &installment);
+
+    printf("\nInsert now the number of months it's been late:");
+    scanf("%f", &months);
+
+    inter = 0.05;
+    currentValue = installment + (installment * inter) * months;
+
+    printf("\nCurrent value added by late interest rate is: %.2f.", currentValue);
+
+    return 0;
+}
