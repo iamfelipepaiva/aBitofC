@@ -3,7 +3,7 @@ int main() {
 
     float avgspeed, time, distancia, litersspent, fuelLength;
 
-    printf("Type, in km/h, the average speed of your trip:");
+    printf("Type in km/h the average speed of your trip:");
     scanf("%f", &avgspeed);
 
     printf("\nNow, insert the number of hours it will take:");
