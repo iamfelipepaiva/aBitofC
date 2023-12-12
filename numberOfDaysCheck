@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+    int month;
+
+    printf("Type the number of a month:");
+    scanf("%d", &month);
+
+    if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+        printf("This is a 31-day month.");
+    } else if (month == 4 || month == 6 || month == 9 || month == 11){
+        printf("The inserted month has 30 days.");
+    } else {
+        printf("This is a 28-day month.");
+    }
+    return 0;
+}
