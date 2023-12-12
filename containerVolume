@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+    float height, radius, volume;
+
+    printf("Type the height of the due container:");
+    scanf("%f", &height);
+
+    printf("\nNow, insert its radius:");
+    scanf("%f", &radius);
+
+    volume = 3.14 * (radius * radius) * height;
+    printf("\nThe volume of the container, with the given info, is: %.2f", volume);
+
+    return 0;
+}
