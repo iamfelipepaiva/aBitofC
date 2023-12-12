@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main (){
+
+    float productPrice, duePayment;
+    printf("How much does the product you're purchasing cost?");
+    scanf("%f", &productPrice);
+    duePayment = productPrice - (productPrice * 0.30);
+
+    if (productPrice >= 51) {
+        printf("Your total discount equals 30%%. The price to be paid is: %.2f .\n", duePayment);
+        printf("\nThank you!\n");
+
+    } else{
+        printf("Discounts today apply to products over $50.00 only.");
+        printf("\nKeep shopping! Thank you!\n");
+    }
+    return 0;
+}
