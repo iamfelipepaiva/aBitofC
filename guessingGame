@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+    srand(time(NULL));
+    int guessingTries = 0;
+    int magicNumber = (rand() % 1000) + 1;
+    int guessNumber;
+
+    while(1){
+        printf("Type ahead guess number %d: ", ++guessingTries);
+        scanf("%d", &guessNumber);
+
+        if(guessNumber == magicNumber){
+            printf("Well done! You've won it!");
+            return 0;
+        }
+
+        if(guessingTries == 10){
+            printf("Guessing number limit reach! Maybe next time!");
+            return 0;
+        }
+        guessNumber < magicNumber ?
+        printf("It's low! Try again!\n") :
+        printf("It's high! Give it another try!\n ");
+    }
+
+    return 0;
+}
