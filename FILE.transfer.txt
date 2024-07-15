@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+   FILE *infoOrigin=NULL;
+   FILE *infoDestination=NULL;
+   infoOrigin= fopen("C:\\Users\\User\\Documents\\Dados\\texto.txt", "r");
+   infoDestination= fopen("C:\\Users\\User\\Documents\\Dados\\copia.txt", "w");
+   if(infoDestination==NULL || infoOrigin==NULL){
+       printf("\nSomething went wrong with the opening of the files. Look back at it.");
+   }else{
+       printf("\nFiles successfully opened. Go on.");
+   }
+   printf("\nTime to transfer the due info.");
+   int charSource;
+   while( (charSource=fgetc(infoOrigin))!=EOF){
+       fputc(charSource, infoDestination);
+   }
+   printf("\nInfo successfully transferred.");
+   fclose(infoOrigin);
+   fclose(infoDestination);
+   printf("\nFiles closed.");
+
+
+   return 0;
+}
+
+
