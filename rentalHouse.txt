@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+struct houseInfo{
+   int num;
+   char street[51];
+   char neighborhood[51];
+   char city[51];
+   int roomsNumber;
+   double rentalPrice;
+};
+
+
+void collectingHouseInfo(struct houseInfo *rental);
+void printingOutInfo(struct houseInfo rental);
+
+
+int main(){
+   struct houseInfo whateverName;
+   printf("\t| House information required |\n");
+   collectingHouseInfo(&whateverName);
+   printf("\n\t***Below is the input info***\n");
+   printingOutInfo(whateverName);
+}
+
+
+void collectingHouseInfo(struct houseInfo *rental){
+   printf("Insert its number: ");
+   scanf("%d", &rental->num);
+   fflush(stdin);
+   printf("\nType its street: ");
+   scanf("%[^\n]", rental->street);
+   fflush(stdin);
+   printf("\nInput the neighborhood it's located in: ");
+   fgets(rental->neighborhood, sizeof(rental->neighborhood), stdin);
+   rental->neighborhood[strlen(rental->neighborhood)-1] = '\0';
+   printf("\nWrite the city: ");
+   scanf("%[^\n]", rental->city);
+   printf("\nInform the number of rooms: ");
+   scanf("%d", &rental->roomsNumber);
+   printf("\nAdd its aimed at rental price: ");
+   scanf("%lf", &rental->rentalPrice);
+
+
+}
+
+
+void printingOutInfo(struct houseInfo rental){
+   printf("Number: %d", rental.num);
+   printf("\nStreet: %s", rental.street);
+   printf("\nNeighboorhood: %s", rental.neighborhood);
+   printf("\nCity: %s", rental.city);
+   printf("\nNumber of rooms: %d", rental.roomsNumber);
+   printf("\nRental price: %.2lf", rental.rentalPrice);
+}
