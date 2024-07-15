@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct vehicle {
+   char brand[51];
+   char model[51];
+   int year, kilometersRun;
+   double price;
+
+
+};
+
+void collectingInfo(struct vehicle *motorcycle);
+void printingOutInfo(struct vehicle motorcycle);
+
+int main(){
+   struct vehicle motorcycle1, motorcycle2;
+   collectingInfo(&motorcycle1);
+   collectingInfo(&motorcycle2);
+   printingOutInfo(motorcycle1);
+   printingOutInfo(motorcycle2);
+
+
+   return 0;
+}
+
+void collectingInfo(struct vehicle *motorcycle){
+   fflush(stdin);
+   printf("Insert ahead the brand of the motorcycle to be sold: ");
+   scanf("%[^\n]", motorcycle->brand);
+   fflush(stdin);
+   printf("Type its model: ");
+   fgets(motorcycle->model, sizeof(motorcycle->model), stdin);
+   motorcycle->model[strlen(motorcycle->model)-1]='\0';
+   printf("Inform its production year: ");
+   scanf("%d", &motorcycle->year);
+   printf("Type the length of kilimeters it's been run thus far: ");
+   scanf("%d", &motorcycle->kilometersRun);
+   printf("Insert the targeted price now: ");
+   scanf("%lf", &motorcycle->price);
+}
+
+void printingOutInfo(struct vehicle motorcycle){
+   printf("Brand: %s.\n", motorcycle.brand);
+   printf("Model: %s.\n", motorcycle.model);
+   printf("Manufacturing year: %d.\n", motorcycle.year);
+   printf("Kilometers run: %d.\n", motorcycle.kilometersRun);
+   printf("Price: %.2lf.\n", motorcycle.price);
+}
