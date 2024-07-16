@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct device{
+   char brand[21];
+   char model[21];
+   char memoryCapacity[21];
+   char processor[21];
+   int launchYear;
+   char conditions[51];
+   double wishedPrice;
+};
+
+void collectingInfo(struct device *details);
+void printingOutInfo(struct device details);
+
+int main(){
+   struct device device1;
+   collectingInfo(&device1);
+   printingOutInfo(device1);
+
+   return 0;
+}
+
+void collectingInfo(struct device *details){
+   printf("Type its brand:");
+   scanf("%[^\n]", details->brand);
+   fflush(stdin);
+   printf("\nType its model: ");
+   fgets(details->model, sizeof(details->model), stdin);
+   fflush(stdin);
+   printf("\nType its memory capacity: ");
+   scanf("%[^\n]", details->memoryCapacity);
+   fflush(stdin);
+   printf("\nType its processor: ");
+   scanf("%[^\n]", details->processor);
+   printf("\nType its launch year:");
+   scanf("%d", &details->launchYear);
+   fflush(stdin);
+   printf("\nWrite its conditions:");
+   fgets(details->conditions, sizeof(details->conditions), stdin);
+   details->conditions[strlen(details->conditions)-1]='\0';
+   fflush(stdin);
+   printf("Write your target price: ");
+   scanf("%lf", &details->wishedPrice);
+}
+
+void printingOutInfo(struct device details){
+   printf("\nBrand: %s", details.brand);
+   printf("\nModel: %s", details.model);
+   printf("\nMemory: %s", details.memoryCapacity);
+   printf("\nProcessor: %s", details.processor);
+   printf("\nLaunch year: %d", details.launchYear);
+   printf("\nConditions: %s", details.conditions);
+   printf("\nPrice: %.2lf", details.wishedPrice);
+}
