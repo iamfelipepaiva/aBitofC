@@ -1,0 +1,21 @@
+#include <stdio.h>
+void printingItBackwards(char *reverse);
+int main() {
+    char whatever[100];
+    fflush(stdin);
+    printf("Insert ahead whatever you wish: ");
+    fgets(whatever, sizeof(whatever), stdin);
+    printingItBackwards(whatever);
+    return 0;
+}
+
+void printingItBackwards(char *reverse){
+    char *ptoReverse = reverse;
+    while(*reverse !='\0') reverse++;
+    reverse--;
+    while(reverse>=ptoReverse) putchar(*reverse--);
+}
+
+
+
+
