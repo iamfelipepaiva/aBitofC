@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct professional{
+   char name[51];
+   int age;
+   int yearsOfExperience;
+   char currentLocation[51];
+   double aimedSalary;
+};
+
+void collectingInfo(struct professional *personalInfo);
+void puttingInfoOut(struct professional personalInfo);
+
+int main(){
+   struct professional candidate1, candidate2;
+   collectingInfo(&candidate1);
+  // collectingInfo(&candidate2);
+   puttingInfoOut(candidate1);
+ //  puttingInfoOut(candidate2);
+
+   return 0;
+}
+
+void collectingInfo(struct professional *personalInfo){
+   fflush(stdin);
+   printf("Write your full name: ");
+   fgets(personalInfo->name, sizeof(personalInfo->name), stdin);
+   personalInfo->name[strlen(personalInfo->name)-1]='\0';
+   printf("Write your current age: ");
+   scanf("%d", &personalInfo->age);
+   printf("Write your experience in years: ");
+   scanf("%d", &personalInfo->yearsOfExperience);
+   fflush(stdin);
+   printf("Write your current location: ");
+   scanf("%[^\n]", personalInfo->currentLocation);
+   fflush(stdin);
+   printf("What's the salary you aim at?");
+   scanf("%lf", &personalInfo->aimedSalary);
+
+}
+
+void puttingInfoOut(struct professional personalInfo){
+   printf("Candidate's full name: %s\n", personalInfo.name);
+   printf("Candidate's current age: %d\n ", personalInfo.age);
+   printf("Candidate's experience (in years): %d\n", personalInfo.yearsOfExperience);
+   printf("Candidate's current address: %s\n", personalInfo.currentLocation);
+   printf("Candidate's expected salary: %.2lf", personalInfo.aimedSalary);
+}
