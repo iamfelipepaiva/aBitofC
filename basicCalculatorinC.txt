@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int add(int a, int b);
+
+int subtract(int a, int b);
+
+int multiply(int a, int b);
+
+int divide(int a, int b);
+
+int exponentiate(int base, int power);
+
+int add(int a, int b){
+    return a + b;
+}
+
+int subtract(int a, int b){
+    return a - b;
+}
+
+int multiply(int a, int b){
+    return a * b;
+}
+
+int divide(int a, int b){
+    if(b){
+        return a / b;
+    }
+    printf("No number can be divided by zero.\n");
+    exit(1);
+}
+
+int exponentiate(int base, int power){
+    int result = 1;
+    for(int i = 1; i<=power; i++){
+        result *= base;
+    }
+    return result;
+}
+
+int main() {
+    printf("Basic Calculator in C\n");
+    printf("1. Add \n");
+    printf("2. Subtract \n");
+    printf("3. Multiply \n");
+    printf("4. Divide \n");
+    printf("5. Power of \n");
+    printf("Choose one of the above operations:");
+    int option, firstValue, secondValue, result=0;
+    scanf("%d", &option);
+    printf("Input the first value:");
+    scanf("%d", &firstValue);
+    printf("Input the second value:");
+    scanf("%d", &secondValue);
+    switch (option) {
+        case 1:
+            result = add(firstValue, secondValue);
+            break;
+        case 2:
+            result = subtract(firstValue, secondValue);
+            break;
+        case 3:
+            result = multiply(firstValue, secondValue);
+            break;
+        case 4:
+            result = divide(firstValue, secondValue);
+            break;
+        case 5:
+            result = exponentiate(firstValue, secondValue);
+            break;
+        default:
+            printf("Invalid option.\n");
+    }
+    printf("Result: %d \n", result);
+    return 0;
+}
