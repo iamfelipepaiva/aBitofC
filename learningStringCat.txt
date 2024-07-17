@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char randomString[51];
+    fflush(stdin);
+    printf("Input first piece of info: ");
+    fgets(randomString, sizeof(randomString), stdin);
+    randomString[strlen(randomString)-1] = '\0';
+
+    char secondRandomString[51];
+    fflush(stdin);
+    printf("Insert the second one now: ");
+    fgets(secondRandomString, sizeof(secondRandomString), stdin);
+    secondRandomString[strlen(secondRandomString)-1] = '\0';
+
+    char altogether[102];
+    strcpy(altogether, randomString);
+    strcat(altogether, " ");
+    strcat(altogether, secondRandomString);
+
+    printf("\nConcatenating it: %s", altogether);
+
+    return 0;
+}
