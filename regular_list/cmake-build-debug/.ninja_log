@@ -1,0 +1,12 @@
+# ninja log v5
+10	659	7576335032436535	CMakeFiles/regular_list.dir/regular_list.c.obj	79ab9845d69eb186
+1	768	7576335033869137	CMakeFiles/regular_list.dir/main.c.obj	42bcd081cd444ef5
+770	3306	7576335050733347	regular_list.exe	ae3218c2ed370da7
+88	2195	7576346493079564	CMakeFiles/regular_list.dir/regular_list.c.obj	79ab9845d69eb186
+52	2594	7576346496950027	CMakeFiles/regular_list.dir/main.c.obj	42bcd081cd444ef5
+2595	4254	7576346510054674	regular_list.exe	ae3218c2ed370da7
+4	200	7576348550961527	CMakeFiles/regular_list.dir/main.c.obj	42bcd081cd444ef5
+5	164	7576348703740242	CMakeFiles/regular_list.dir/regular_list.c.obj	79ab9845d69eb186
+166	482	7576348706333002	regular_list.exe	ae3218c2ed370da7
+4	223	7576361358517287	CMakeFiles/regular_list.dir/main.c.obj	42bcd081cd444ef5
+225	644	7576361361551114	regular_list.exe	ae3218c2ed370da7
