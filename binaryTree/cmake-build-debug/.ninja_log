@@ -1,0 +1,20 @@
+# ninja log v5
+23	1580	7579810570989647	CMakeFiles/binaryTree.dir/binaryTree.c.obj	bd2c98a689453ad7
+1	1586	7579810570619853	CMakeFiles/binaryTree.dir/main.c.obj	1ea993cc30db9e61
+1587	2723	7579810581126076	binaryTree.exe	4530ea2c56e7ec15
+6	299	7579815084046183	CMakeFiles/binaryTree.dir/binaryTree.c.obj	bd2c98a689453ad7
+301	819	7579815087689000	binaryTree.exe	4530ea2c56e7ec15
+8	282	7579815526008972	CMakeFiles/binaryTree.dir/binaryTree.c.obj	bd2c98a689453ad7
+284	669	7579815528888522	binaryTree.exe	4530ea2c56e7ec15
+4	243	7579818402505117	CMakeFiles/binaryTree.dir/main.c.obj	1ea993cc30db9e61
+13	280	7579818402808786	CMakeFiles/binaryTree.dir/binaryTree.c.obj	bd2c98a689453ad7
+282	630	7579818405690548	binaryTree.exe	4530ea2c56e7ec15
+7	384	7579820256310702	CMakeFiles/binaryTree.dir/main.c.obj	1ea993cc30db9e61
+386	769	7579820259662234	binaryTree.exe	4530ea2c56e7ec15
+5	259	7579828084638031	CMakeFiles/binaryTree.dir/main.c.obj	1ea993cc30db9e61
+15	281	7579828084847931	CMakeFiles/binaryTree.dir/binaryTree.c.obj	bd2c98a689453ad7
+282	624	7579828087556357	binaryTree.exe	4530ea2c56e7ec15
+7	230	7579829424721641	CMakeFiles/binaryTree.dir/binaryTree.c.obj	bd2c98a689453ad7
+232	563	7579829427390107	binaryTree.exe	4530ea2c56e7ec15
+9	200	7579832913216578	CMakeFiles/binaryTree.dir/binaryTree.c.obj	bd2c98a689453ad7
+202	556	7579832915755118	binaryTree.exe	4530ea2c56e7ec15
