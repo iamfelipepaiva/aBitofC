@@ -1,0 +1,4 @@
+# ninja log v5
+11	295	7580491854773121	CMakeFiles/circularQueue.dir/main.c.obj	9bed9527b9dda745
+1	324	7580491855102921	CMakeFiles/circularQueue.dir/circularQueue.c.obj	63eef7193ae66a3d
+325	1010	7580491860929601	circularQueue.exe	b830b21a48d740f4
