@@ -1,6 +1,6 @@
-# College handmade projects
+# College projects
 
-This repository is all about different codes of projects explored and worked on in college.
+This repository contains different codes of projects explored and worked on in college.
 
 ## Technologies
 
